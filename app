@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
+/*
+  gifty by tcoyze
+  Translate text to GIFS then attach it to a tweet!
+*/
 
 var program = require('commander');
 var Giphy = require('giphy');
@@ -11,14 +12,12 @@ var async = require('async');
 var request = require('request');
 var fs = require('fs');
 
-/**
-  * Instantiate
-  */
 
-var twitterConsumerKey = "W9AODaH8w5rPEmHceoe3bORS6";
-var twitterConsumerSecret = "6AEJnhdIMeLuikg7aE5Rqo3JW2r5uYV64rbCVjB7G92XcqFs9g";
-var twitterAccessToken = "3958127774-GlOee8QvhsxKIsgBS6sn2DQbzuoYbluodpWIUKe";
-var twitterAccessSecret = "7eZ2zN4xGaZmoaUi6HMuc9WoRxOVzRZGK2a0zTJYjIkAQ";
+// REQUIRED: Load your twitter credentials here...
+var twitterConsumerKey = "CONSUMER_KEY";
+var twitterConsumerSecret = "CONSUMER_SECRET";
+var twitterAccessToken = "ACCESS_TOKEN";
+var twitterAccessSecret = "ACCESS_TOKEN_SECRET";
 
 // Required for sending a tweet
 var twitter = new twitterAPI({
@@ -44,7 +43,7 @@ var exec = require('child_process').exec;
 program
   .version('1.0.0')
   .option('--translate [value]', 'Translate string into a GIF')
-  .option('--tweet [value]', 'Tweet GIF like so: "hello world"')
+  .option('--tweet [value]', 'Tweet like so: "hello world"')
   .option('--id [value]', 'ID of GIF that you want to upload')
   .parse(process.argv);
 
