@@ -10,6 +10,14 @@ This is a command line tool for translating thoughts to GIFs, and then tweeting 
 
   `sudo npm link`
 
+Replace placeholders in `./app` with your Twitter credentials
+```javascript
+var twitterConsumerKey = "CONSUMER_KEY";
+var twitterConsumerSecret = "CONSUMER_SECRET";
+var twitterAccessToken = "ACCESS_TOKEN";
+var twitterAccessSecret = "ACCESS_TOKEN_SECRET";
+```
+
 ## Usage
   From your terminal:
 
